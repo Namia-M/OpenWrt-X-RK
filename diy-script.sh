@@ -74,20 +74,10 @@ git clone --depth=1 https://github.com/Jason6111/luci-app-netdata package/luci-a
 git_sparse_clone main https://github.com/Lienol/openwrt-package luci-app-filebrowser luci-app-ssr-mudb-server
 git_sparse_clone openwrt-18.06 https://github.com/immortalwrt/luci applications/luci-app-eqos
 git_sparse_clone main https://github.com/kenzok8/small-package smartdns luci-app-smartdns
-# 3-4-5-G模块
-git clone --depth=1 https://github.com/ouyangzq/sendat package/sendat
-git clone --depth=1 https://github.com/ouyangzq/luci-app-cpe package/luci-app-cpe
-git clone --depth=1 https://github.com/4IceG/luci-app-3ginfo-lite package/luci-app-3ginfo-lite
-git clone --depth=1 https://github.com/Siriling/5G-Modem-Support package/luci-app-modem
-
 # 添加额外插件模板 git_sparse_clone master https://github.com/syb999/openwrt-19.07.1 package/network/services/msd_lite
 # ----------------------------------------------------------------------------------------------------------------------------------
-# 自动更新晶晨宝盒
-git_sparse_clone main https://github.com/ophub/luci-app-amlogic luci-app-amlogic
-sed -i "s|firmware_repo.*|firmware_repo 'https://github.com/Namia-Q/OpenWrt-X-RK'|g" package/luci-app-amlogic/root/etc/config/amlogic
-# sed -i "s|kernel_path.*|kernel_path 'https://github.com/ophub/kernel'|g" package/luci-app-amlogic/root/etc/config/amlogic
-sed -i "s|ARMv8|ARMv8_PLUS|g" package/luci-app-amlogic/root/etc/config/amlogic
-
+# 自动更新
+git_sparse_clone main https://github.com/kenzok8/small-package  autoupdate luci-app-autoupdate
 # ----------------------------------------------------------------------------------------------------------------------------------
 # 科学上网插件
 git clone --depth=1 -b main https://github.com/fw876/helloworld package/luci-app-ssr-plus
@@ -135,7 +125,7 @@ chmod 755 package/luci-app-onliner/root/usr/share/onliner/setnlbw.sh
 # ## # # # # # # # # # # # # # # # # # # # # # # 个性化设置 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
 
 # x86 型号只显示 CPU 型号【此固件不使用】
-sed -i 's/${g}.*/${a}${b}${c}${d}${e}${f}${hydrid}/g' package/lean/autocore/files/x86/autocore
+# sed -i 's/${g}.*/${a}${b}${c}${d}${e}${f}${hydrid}/g' package/lean/autocore/files/x86/autocore
 # ----------------------------------------------------------------------------------------------------------------------------------
 # 修改本地时间格式
 sed -i 's/os.date()/os.date("%a %Y-%m-%d %H:%M:%S")/g' package/lean/autocore/files/*/index.htm
