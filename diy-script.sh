@@ -77,9 +77,8 @@ git_sparse_clone main https://github.com/kenzok8/small-package smartdns luci-app
 # 3-4-5-G模块
 git clone --depth=1 https://github.com/ouyangzq/sendat package/sendat
 git clone --depth=1 https://github.com/ouyangzq/luci-app-cpe package/luci-app-cpe
-
 git clone --depth=1 https://github.com/4IceG/luci-app-3ginfo-lite package/luci-app-3ginfo-lite
-git clone --depth=1 https://github.com/Siriling/5G-Modem-Support luci-app-modem
+git clone --depth=1 https://github.com/Siriling/5G-Modem-Support package/luci-app-modem
 
 # 添加额外插件模板 git_sparse_clone master https://github.com/syb999/openwrt-19.07.1 package/network/services/msd_lite
 # ----------------------------------------------------------------------------------------------------------------------------------
