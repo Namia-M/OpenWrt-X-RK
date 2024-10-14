@@ -75,9 +75,7 @@ git clone --depth=1 https://github.com/Jason6111/luci-app-netdata package/luci-a
 git clone --depth=1 https://github.com/ouyangzq/sendat package/sendat
 git clone --depth=1 https://github.com/ouyangzq/luci-app-cpe package/luci-app-cpe
 git clone --depth=1 https://github.com/4IceG/luci-app-3ginfo-lite package/luci-app-3ginfo-lite
-git_sparse_clone main https://github.com/Siriling/5G-Modem-Support luci-app-modem 
-git_sparse_clone main https://github.com/Siriling/5G-Modem-Support package/5G
-
+git_sparse_clone main https://github.com/Siriling/5G-Modem-Support luci-app-modem
 git_sparse_clone main https://github.com/Lienol/openwrt-package luci-app-filebrowser luci-app-ssr-mudb-server
 git_sparse_clone openwrt-18.06 https://github.com/immortalwrt/luci applications/luci-app-eqos
 git_sparse_clone main https://github.com/kenzok8/small-package smartdns luci-app-smartdns
