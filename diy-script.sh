@@ -72,7 +72,7 @@ git clone --depth=1 https://github.com/esirplayground/luci-app-poweroff package/
 git clone --depth=1 https://github.com/destan19/OpenAppFilter package/OpenAppFilter
 git clone --depth=1 https://github.com/Jason6111/luci-app-netdata package/luci-app-netdata
 git clone --depth=1 https://github.com/4IceG/luci-app-3ginfo-lite package/luci-app-3ginfo-lite
-git clone --depth=1 https://github.com/kiddin9/kwrt-packages package/luci-app-modem
+git clone --depth=1 https://github.com/Siriling/5G-Modem-Support package/luci-app-modem
 git_sparse_clone main https://github.com/Lienol/openwrt-package luci-app-filebrowser luci-app-ssr-mudb-server
 git_sparse_clone openwrt-18.06 https://github.com/immortalwrt/luci applications/luci-app-eqos
 git_sparse_clone main https://github.com/kenzok8/small-package smartdns luci-app-smartdns
