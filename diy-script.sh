@@ -30,8 +30,6 @@ find package/luci-theme-*/* -type f -name '*luci-theme-*' -print -exec sed -i '/
 # ----------------------------------------------------------------------------------------------------------------------------------
 
 
-
-
 # ----------------------------------------------------------------------------------------------------------------------------------
 # 移除要替换的包
 rm -rf feeds/packages/net/mosdns
@@ -44,8 +42,6 @@ rm -rf feeds/luci/applications/luci-app-netdata
 rm -rf feeds/luci/applications/luci-app-serverchan
 # 模板 rm -rf feeds/luci/applications/luci-app-serverchan
 # ----------------------------------------------------------------------------------------------------------------------------------
-
-
 
 
 # ## # # # # # # # # # # # # # # # # # # # # # # 添加插件的命令修改 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
@@ -61,8 +57,6 @@ function git_sparse_clone() {
 # ----------------------------------------------------------------------------------------------------------------------------------
 
 
-
-
 # ## # # # # # # # # # # # # # # # # # # # # # # 添加额外插件 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
 # 添加额外插件
 git clone --depth=1 https://github.com/kongfl888/luci-app-adguardhome package/luci-app-adguardhome
@@ -71,8 +65,6 @@ git clone --depth=1 https://github.com/ilxp/luci-app-ikoolproxy package/luci-app
 git clone --depth=1 https://github.com/esirplayground/luci-app-poweroff package/luci-app-poweroff
 git clone --depth=1 https://github.com/destan19/OpenAppFilter package/OpenAppFilter
 git clone --depth=1 https://github.com/Jason6111/luci-app-netdata package/luci-app-netdata
-git clone --depth=1 https://github.com/4IceG/luci-app-3ginfo-lite package/luci-app-3ginfo-lite
-git clone --depth=1 https://github.com/Siriling/5G-Modem-Support package/luci-app-modem
 git_sparse_clone main https://github.com/Lienol/openwrt-package luci-app-filebrowser luci-app-ssr-mudb-server
 git_sparse_clone openwrt-18.06 https://github.com/immortalwrt/luci applications/luci-app-eqos
 git_sparse_clone main https://github.com/kenzok8/small-package smartdns luci-app-smartdns
@@ -121,9 +113,6 @@ chmod 755 package/luci-app-onliner/root/usr/share/onliner/setnlbw.sh
 # ----------------------------------------------------------------------------------------------------------------------------------
 
 
-
-
-
 # ## # # # # # # # # # # # # # # # # # # # # # # 个性化设置 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
 
 # x86 型号只显示 CPU 型号【此固件不使用】
@@ -146,9 +135,6 @@ cp -f $GITHUB_WORKSPACE/scripts/qmi_wwan_q.c package/wwan/driver/quectel_QMI_WWA
 # 修复 armv8 设备 xfsprogs 报错
 sed -i 's/TARGET_CFLAGS.*/TARGET_CFLAGS += -DHAVE_MAP_SYNC -D_LARGEFILE64_SOURCE/g' feeds/packages/utils/xfsprogs/Makefile
 # ----------------------------------------------------------------------------------------------------------------------------------
-
-
-
 
 
 # ## # # # # # # # # # # # # # # # # # # # # # # 修改制作文件 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
