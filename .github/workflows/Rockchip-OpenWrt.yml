@@ -8,8 +8,8 @@ on:
 env:
   REPO_URL: https://github.com/coolsnowwolf/lede
   REPO_BRANCH: master
-  CONFIG_FILE: configs/Target.config
-  EXTRA_CONFIG: configs/rockchip.config
+  CONFIG_FILE: configs/rockchip.config
+  EXTRA_CONFIG: configs/extra.config
   DIY_SCRIPT: diy-script.sh
   CLASH_KERNEL: arm64
   CACHE_TOOLCHAIN: true
